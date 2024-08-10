@@ -1,0 +1,50 @@
+# My Node App
+
+This project uses Docker to build and run the application. Follow the steps below to get started.
+
+## Prerequisites
+
+- Docker
+- Docker Compose
+
+## Setup
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/ai-ambassador-hub/basic-auth-with-expressjs.git
+    cd basic-auth-with-expressjs
+    ```
+
+2. **Create a `.env` file:**
+
+    Create a `.env` file in the root directory of the project and add your environment variables. For example:
+
+    ```env
+    PORT=3000
+    BASIC_AUTH_USERNAME=admin
+    BASIC_AUTH_PASSWORD=password
+    ```
+
+3. **Make the `run_docker.sh` script executable:**
+
+    ```bash
+    chmod +x run_docker.sh
+    ```
+
+4. **Run the application:**
+
+    ```bash
+    ./run_docker.sh
+    ```
+
+This will build the Docker image and run the container using Docker Compose, with environment variables loaded from the `.env` file.
+
+## Stopping the Application
+
+To stop the application, run:
+    ```bash
+    docker-compose down
+    ```
+    
+This command will stop and remove the Docker containers defined in the `docker-compose.yml` file.
